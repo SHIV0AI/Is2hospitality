@@ -64,6 +64,12 @@ export default function LeadForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Only submit if on final step (step 4)
+    if (step !== 4) {
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
